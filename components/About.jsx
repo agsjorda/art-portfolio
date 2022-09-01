@@ -29,9 +29,9 @@ const About = () => {
             Check out some of my latest projects
           </p>
         </div>
-        <div className='w-full h-auto m-auto shadow-xl shadow-gray-400 rounded-xl flex items-center justify-center hover:scale-105 ease-in duration-200'>
+        <div className='w-full h-auto m-auto shadow-xl shadow-gray-400 rounded-xl flex items-center justify-center '>
           <Image
-            className='rounded-xl'
+            className='rounded-xl hover:scale-105 ease-in duration-200'
             src='/../public/assets/undraw_Profile.png'
             width='800'
             height='800'
