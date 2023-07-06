@@ -153,29 +153,38 @@
 
 .app__header-img {
 	flex: 1;
-	height: 100vh;
+	height: 90vh;
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	align-items: flex-start;
 	position: relative;
 
-	img {
+	.image_profile {
 		width: 100%;
 		object-fit: contain;
 		z-index: 1;
-	}
-
-	.overlay_circle {
-		position: absolute;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		z-index: 0;
-		width: 100%;
-		height: 90%;
+		height: 80%;
+		background-color: rgba(36, 40, 160, 0.1);
+		border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+		animation: profile__animate 6s ease-in-out infinite 1s;
 	}
 
 	@media screen and (max-width: 1200px) {
 		margin: 2rem 0;
+	}
+}
+
+@keyframes profile__animate {
+	0% {
+		background-color: rgba(36, 40, 160, 0.1);
+		border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+	}
+	50% {
+		background-color: rgb(121, 123, 166);
+		border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+	}
+	100% {
+		background-color: rgba(36, 40, 160, 0.1);
+		border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
 	}
 }
