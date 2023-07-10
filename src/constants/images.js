@@ -25,7 +25,7 @@ import about04 from "../assets/about04.png";
 
 import profile from "../assets/profile.png";
 import circle from "../assets/circle.svg";
-import Arthur from "../assets/Arthur Jorda.svg";
+import Arthur from "../assets/ArthurJorda.svg";
 
 import adidas from "../assets/adidas.png";
 import amazon from "../assets/amazon.png";
