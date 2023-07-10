@@ -1,9 +1,9 @@
 import "./Skills.scss";
 import { useEffect, useState } from "react";
-import { Tooltip } from "react-tooltip";
+import { Tooltip as ReactTooltip } from "react-tooltip";
 
 import { motion } from "framer-motion";
-import { AppWrap } from "../../wrapper";
+import { AppWrap, MotionWrap } from "../../wrapper";
 import client, { urlFor } from "../../client";
 
 const Skills = () => {
@@ -67,17 +67,16 @@ const Skills = () => {
 											data-for={work.name}
 											key={work.name}
 										>
-											<h4 className="bold-text">{work.name}</h4>
+											<h4
+												className="bold-text"
+												data-tooltip-id={work.name}
+												data-tooltip-content={work.desc}
+											>
+												{work.name}
+											</h4>
 											<p className="p-text">{work.company}</p>
 										</motion.div>
-										<Tooltip
-											id={work.name}
-											effect="solid"
-											arrowColor="#fff"
-											className="skills-tooltip"
-										>
-											{work?.desc}
-										</Tooltip>
+										<ReactTooltip id={work.name} className="skills-tooltip" />
 									</>
 								))}
 							</motion.div>
@@ -89,4 +88,8 @@ const Skills = () => {
 	);
 };
 
-export default AppWrap(Skills, "skills");
+export default AppWrap(
+	MotionWrap(Skills, "app__skills"),
+	"skills",
+	"app__whitebg"
+);

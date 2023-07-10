@@ -1,6 +1,6 @@
 import "./App.scss";
-
-import { About, Footer, Header, Skills, Testimonials, Work } from "./container";
+import "react-tooltip/dist/react-tooltip.css";
+import { About, Footer, Header, Skills, Testimonial, Work } from "./container";
 import { Navbar } from "./components";
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
 			<About />
 			<Work />
 			<Skills />
-			<Testimonials />
+			<Testimonial />
 			<Footer />
 		</div>
 	);
