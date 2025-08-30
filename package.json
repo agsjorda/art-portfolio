@@ -20,6 +20,9 @@
     "react-icons": "^4.10.1",
     "react-tooltip": "^5.18.0"
   },
+  "engines": {
+    "node": ">=20.0.0"
+  },
   "devDependencies": {
     "@types/react": "^18.0.37",
     "@types/react-dom": "^18.0.11",
